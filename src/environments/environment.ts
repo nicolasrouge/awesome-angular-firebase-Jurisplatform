@@ -9,7 +9,7 @@ export const environment = {
     authDomain: "sizangularproject.firebaseapp.com",
     databaseURL: "https://sizangularproject.firebaseio.com",
     projectId: "sizangularproject",
-    storageBucket: "gs://sizangularproject.appspot.com/",
+    storageBucket: "sizangularproject.appspot.com",
     messagingSenderId: "170653464797",
     appId: "1:170653464797:web:8acd5e81f4167bab"
   }
