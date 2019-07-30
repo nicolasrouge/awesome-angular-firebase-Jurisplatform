@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  authState: any = null
+  constructor(public afAuth: AngularFireAuth) { 
+    this.afAuth.authState.subscribe(data => this.authState = data)
+  }
 
-  constructor(public afAuth: AngularFireAuth) { }
+  get authenticated(): boolean {
+    return this.authState !== null
+  }
+
+  get currentUserId(): string {
+    return this.authenticated ? this.authState.uid : null
+  }
 
   login() {
     console.log("login");
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
   }
-
-  /*doGoogleLogin(){
-    return new Promise<any>((resolve, reject) => {
-      let provider = new firebase.auth.GoogleAuthProvider();
-      provider.addScope('profile');
-      provider.addScope('email');
-      this.afAuth.auth
-      .signInWithPopup(provider)
-      .then(res => {
-        resolve(res);
-      })
-    })
-  }*/
-  
 
   logout() {
     this.afAuth.auth.signOut()
