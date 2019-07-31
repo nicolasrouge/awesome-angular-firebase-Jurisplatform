@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/core/auth.service';
 export class PostDetailComponent implements OnInit {
 
   post: Post
+editing: boolean = false
 
   constructor(
     private route: ActivatedRoute,

@@ -1,4 +1,4 @@
-# My awesome angular firebase blog
+# My awesome angular firebase website (blog, homePage, Contact us, Categories...)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
