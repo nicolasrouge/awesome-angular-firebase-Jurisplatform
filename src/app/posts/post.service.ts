@@ -44,7 +44,7 @@ export class PostService {
 
   }
   delete(id: string){
-    return this.getPost(id).delete
+    return this.getPost(id).delete()
   }
   update(id: string, formData){
     return this.getPost(id).update(formData)
