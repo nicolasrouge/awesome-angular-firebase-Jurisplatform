@@ -1,4 +1,16 @@
-# My awesome angular firebase website (blog, homePage, Contact us, Categories...)
+# My awesome angular firebase website
+
+- blog / posts (CRUD)
+- login / logout
+- homePage / bootstrap / contact form
+- contact Page
+- our services (prices + questions + forms)
+- share with social networks (linkedin, facebook)
+
+- posts categories
+- word cloud
+
+- chat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
