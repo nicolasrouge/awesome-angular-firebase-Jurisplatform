@@ -1,5 +1,14 @@
 <div [hidden]="!editing">
-    <h1>Edit mode</h1>
+    <mat-form-field>
+        <input matInput placeholder="Post title" [(ngModel)]="post.title">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <textarea matInput placeholder="Post content" [(ngModel)]="post.content" rows="20"></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
+
 </div>
 <div [hidden]="editing">
     <mat-card *ngIf="post">

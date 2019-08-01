@@ -37,4 +37,14 @@ editing: boolean = false
     this.router.navigate(["/blog"])
   }
 
+updatePost(){
+  const formData = {
+    title: this.post.title,
+    content: this.post.content
+  }
+  const id = this.route.snapshot.paramMap.get('id');
+  this.postService.update(id, formData);
+  this.editing = false;
+}
+
 }
