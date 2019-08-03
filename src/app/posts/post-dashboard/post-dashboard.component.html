@@ -23,7 +23,7 @@
                 <textarea matInput placeholder="Post content" [(ngModel)]="content" rows="20"></textarea>
             </mat-form-field>
             <br>
-            <button mat-raised-button color="accent" (click)="createPost()">{{buttonText}}</button>
+            <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content || !image">{{buttonText}}</button>
 
         </mat-expansion-panel>
     </mat-accordion>
