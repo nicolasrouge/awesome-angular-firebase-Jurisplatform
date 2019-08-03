@@ -42,7 +42,7 @@ updatePost(){
     title: this.post.title,
     content: this.post.content
   }
-  const id = this.route.snapshot.paramMap.get('id');
+  const id = this.route.snapshot.paramMap.get('id');//valueChange in getPostData
   this.postService.update(id, formData);
   this.editing = false;
 }
