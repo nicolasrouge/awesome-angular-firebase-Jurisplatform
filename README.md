@@ -1,8 +1,12 @@
 # My awesome angular firebase website
 
-- blog / posts (CRUD)
-- login / logout
-- homePage / bootstrap / contact form
+- blog / posts (CRUD) --> OK
+- google login OK
+- email login
+- logout ok
+- email signup
+- reset password
+- homePage / bootstrap / contact form -> todo
 - contact Page
 - our services (prices + questions + forms)
 - share with social networks (linkedin, facebook)
