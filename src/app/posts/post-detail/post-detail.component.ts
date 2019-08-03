@@ -18,7 +18,7 @@ editing: boolean = false
     private route: ActivatedRoute,
     private router: Router,
     private postService: PostService,
-    private auth: AuthService
+    public auth: AuthService
   ) { }
 
   ngOnInit() {
