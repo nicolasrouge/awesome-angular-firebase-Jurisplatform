@@ -11,7 +11,7 @@
 
         <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
             <span>Hello {{user.displayName}}!</span>
-            <button mat-raised-button color="accent" routerLink="/dashboard">Write a Post</button>
+            <button mat-raised-button color="primary" class="post_button" routerLink="/dashboard">Write a Post</button>
             <button mat-button (click)="auth.logout()">Logout</button>
         </div>
 
