@@ -14,16 +14,20 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
+import { HomepageComponent } from './page/homepage/homepage.component';
 import { Routes, RouterModule } from '@angular/router';
 
+import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
+import { PageModule } from './page/page.module';
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
   { path: '', loadChildren: './posts/posts.module#PostsModule'},
+  { path: 'home', component: HomepageComponent },
 ]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,11 @@ const routes: Routes = [
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    PostsModule
+    PostsModule,
+    MatButtonModule, 
+    MatCardModule, 
+    MatToolbarModule, 
+    PageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
