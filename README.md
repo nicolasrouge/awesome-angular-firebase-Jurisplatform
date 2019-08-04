@@ -1,20 +1,19 @@
 # My awesome angular firebase website
 
-- blog / posts (CRUD) --> OK
-- google login OK
-- email login
-- logout ok
-- email signup
-- reset password
-- homePage / bootstrap / contact form -> todo
-- contact Page
-- our services (prices + questions + forms)
-- share with social networks (linkedin, facebook)
+- Blog / Posts (CRUD)
+- HomePage / Contact Page / Our services (prices + questions + forms)
 
-- posts categories
-- word cloud
+- Tchat
+- Image gallery
 
-- chat
+- Sign in / sign out / inscrition / reset password
+- Profil utilisateur
+
+- Share with social networks (linkedin, facebook)
+- Posts categories
+- Word cloud
+
+- Design / Dynamique / animation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
