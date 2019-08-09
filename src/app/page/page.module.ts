@@ -12,12 +12,13 @@ import { PrincingComponent } from './princing/princing.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 
 @NgModule({
   declarations: [HomepageComponent, IntroComponent, GalleryComponent, ContentComponent, TestimonialComponent, FooterComponent, ClientComponent, PrincingComponent, HeaderComponent, SocialComponent, NavigationComponent],
   imports: [
-    CommonModule, SharedModule
+    CommonModule, SharedModule, AngularFontAwesomeModule
   ]
 })
 export class PageModule { }
