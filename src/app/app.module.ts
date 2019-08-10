@@ -19,6 +19,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { PageModule } from './page/page.module';
+
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
   { path: '', loadChildren: './posts/posts.module#PostsModule'},
