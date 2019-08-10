@@ -18,7 +18,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 @NgModule({
   declarations: [HomepageComponent, IntroComponent, GalleryComponent, ContentComponent, TestimonialComponent, FooterComponent, ClientComponent, PrincingComponent, HeaderComponent, SocialComponent, NavigationComponent],
   imports: [
-    CommonModule, SharedModule, AngularFontAwesomeModule
+    CommonModule, SharedModule, //AngularFontAwesomeModule // "../node_modules/font-awesome/css/font-awesome.css"
   ]
 })
 export class PageModule { }
