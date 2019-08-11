@@ -188,10 +188,6 @@ section {
 
 /* Main Widths */
 
-.col-1 {
-    width: 100%;
-}
-
 .col-2 {
     width: 50%;
 }
@@ -2061,11 +2057,6 @@ blockquote {
 ===============================*/
 @media (max-width: 480px) {
 
-    #wrapper {
-        margin:0;
-        padding:0;
-    }
-
     .page-border, #scrollUp, #scrollUp:before {
         display:none;
     }
@@ -2074,11 +2065,11 @@ blockquote {
         padding: 15px !important;
     }
 
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38, .row {
+    .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38, .row {
         width: 100%;
     }
 
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38 {
+    .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-2-3, .col-3-4, .col-9-10, .col-61, .col-38 {
         padding-right: 0;
         padding-left: 0;
     }
@@ -2168,7 +2159,7 @@ blockquote {
         padding: 15px 0 !important;
     }
 
-    .col-1, .col-2, .col-5, .col-7, .col-9, .col-11, .col-2-3, .col-3-4, .col-61, .col-38, .row {
+    .col-2, .col-5, .col-7, .col-9, .col-11, .col-2-3, .col-3-4, .col-61, .col-38, .row {
         width: 100%;
     }
 

@@ -13,3 +13,6 @@ span {
 .post_button{
 background-color: #FF5A2F;
 }
+.mat-toolbar{
+    height: min-content;
+}
