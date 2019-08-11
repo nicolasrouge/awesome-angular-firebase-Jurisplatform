@@ -23,7 +23,7 @@ import { PageModule } from './page/page.module';
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
   { path: '', loadChildren: './posts/posts.module#PostsModule'},
-  { path: 'home', component: HomepageComponent },
+  //{ path: 'home', component: HomepageComponent },
 ]
 
 @NgModule({

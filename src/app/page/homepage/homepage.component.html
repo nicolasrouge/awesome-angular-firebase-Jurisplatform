@@ -15,7 +15,8 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/src/assets/images/favicon.ico" title="Favicon" />
     <!--Icon Fonts - Font Awesome Icons-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -32,12 +33,13 @@
         <app-header></app-header>
         <!--Main Content Area-->
         <main id="content">
+            <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+                <app-navigation></app-navigation>
+            </header>
             <router-outlet></router-outlet>
         </main>
         <!--End Main Content Area-->
     </div>
-
-
 
     <!-- Include JavaScript resources -->
     <script src="js/jquery.1.8.3.min.js"></script>
@@ -52,8 +54,6 @@
     <script src="js/assets/images-loaded.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <script src="js/site.js"></script>
-
-
 </body>
 
 </html>
