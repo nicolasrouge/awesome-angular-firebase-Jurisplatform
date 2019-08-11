@@ -1,7 +1,10 @@
+section{
+    padding-top:70px;
+}
+
 mat-card{
     margin: 10px auto;
     max-width: 800px;
-    padding-top:80px;
 }
 
 img{
