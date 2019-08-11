@@ -24,7 +24,6 @@
 <body>
         <mat-toolbar color="primary">
                 <mat-toolbar-row class="top-menu">
-                    <span routerLink="/blog">Blog</span>
                     <span class="spacer"></span>
                     <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
                         <span>Hello {{user.displayName}}!</span>
