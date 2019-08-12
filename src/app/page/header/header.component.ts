@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../../config.service';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  page = {
-    title: 'Bonjour et bienvenue',
-    subtitle: 'ici nous sommes sur la page d\'acueil ! Vous pouvez consulter les articles via l\'onglet \'Blog\'',
-    content: 'Nous couvrons les secteurs juridique des stratups et nouvelles technologies. Vous pourrez comprendre les enjeux techniques et juridiques des nouvelles technologies',
-    image: 'assets/images/logodesign.png'
-  };
+  header = {}
 
-  constructor() { }
+  constructor(private config: ConfigService) { }
 
   ngOnInit() {
+    this.header = this.getHeader();
   }
-
+  getHeader() {
+    return this.config.getConfig().header;
+  }
 }

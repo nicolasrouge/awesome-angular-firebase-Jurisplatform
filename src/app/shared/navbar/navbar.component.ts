@@ -7,10 +7,14 @@ import { AuthService } from '../../core/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  activetab = 'home';
   constructor(public auth: AuthService) { }
 
   ngOnInit() {
+  }
+
+  getActiveTab(tabname: string) {
+    this.activetab = tabname;
   }
 
 }
