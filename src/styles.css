@@ -145,7 +145,7 @@ section {
 /* Rows and Columns */
 
 .row {
-    max-width: 1245px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 75px 0;
     position: relative;
@@ -265,6 +265,7 @@ section {
 
 #header .row {
     padding: 0;
+    width: 90%;
 }
 
 #header aside {
@@ -723,7 +724,7 @@ h6 {
 .section-heading h3 {
     font-size: 14px;
     font-weight: bold;
-    color: #ccc;
+    color: white;
     letter-spacing: 2px;
     padding-bottom: 0;
 }
@@ -734,11 +735,12 @@ h6 {
 
 #banner {
     background-size: cover;
+    height: 100%;
 }
 
 #banner-content{
-    background: url("assets/images/banner-images/banner-image-1.jpg") no-repeat center top;
-    background-size:cover;
+    background: url("assets/images/paris.jpg") no-repeat center top;
+    background-size: auto;
 }
 
 #banner-content.row {
@@ -2314,7 +2316,7 @@ a:hover, #header.nav-solid nav a:hover {
 /* Default Icon Color */
 
 .icon i {
-    color:orangered;
+    color: #333;
 }
 
 /* Border Color */
@@ -2406,7 +2408,7 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("assets/images/banner-images/banner-image-1.jpg") no-repeat center top;
+    background: url("assets/images/paris.jpg") no-repeat center top;
     background-size:cover;
 }
 
@@ -2420,7 +2422,7 @@ body {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:15px;
     font-weight:normal;
-    color:#111;
+    color: #111;
 }
 
 /* Logo, if you are using Fonts as Logo and not image
@@ -2449,7 +2451,7 @@ body {
     font-size:62px;
     line-height:60px;
     font-weight:800;
-    color:#111;
+    color: #111;
 }
 
 #banner h2 {
@@ -2495,14 +2497,14 @@ h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 40px; 
     font-weight:300;
-    color:#111;
+    color:white;
 }
 
 h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 34px; 
     font-weight:300;
-    color:#111;
+    color:white;
 }
 
 h3 {
@@ -2547,14 +2549,14 @@ h6 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:14px;
     font-weight:bold;
-    color:#111;
+    color:whitesmoke;
 }
 
 
 /* Button Color */
 
 .button, input[type="submit"] {
-    border-color:#111;
+    border-color:whitesmoke;
 }
 
 
