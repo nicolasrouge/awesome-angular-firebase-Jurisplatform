@@ -25,8 +25,18 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/theme.scss"
-              
+              "src/theme.scss",
+              "src/assets/essence/css/bootstrap.min.css",
+              "src/assets/essence/css/line-icons.css",
+              "src/assets/essence/css/owl.carousel.css",
+              "src/assets/essence/css/owl.theme.css",
+              "src/assets/essence/css/nivo-lightbox.css",
+              "src/assets/essence/css/magnific-popup.css",
+              "src/assets/essence/css/animate.css",
+              "src/assets/essence/css/color-switcher.css",
+              "src/assets/essence/css/menu_sideslide.css",
+              "src/assets/essence/css/main.css",
+              "src/assets/essence/css/responsive.css"
             ],
             "scripts": []
           },

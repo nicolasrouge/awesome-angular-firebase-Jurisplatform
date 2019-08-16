@@ -1,24 +1,162 @@
-<mat-toolbar color="primary">
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>Jursitartup - blog / website</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/src/assets/images/favicon.ico" title="Favicon" />
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <!--<mat-toolbar color="primary">
         <mat-toolbar-row class="top-menu">
-    
-            <span routerLink="/home">Home</span>
-            <span routerLink="/blog">Blog</span>
-            <span routerLink="/blog">About</span>
-            <span routerLink="/blog">Services</span>
-    
-    
             <span class="spacer"></span>
-    
-            <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-                <span>Hello {{user.displayName}}!</span>
-                <button mat-raised-button color="primary" class="post_button" routerLink="/dashboard">Write a Post</button>
-                <button mat-button (click)="auth.logout()">Logout</button>
-            </div>
-    
-            <ng-template #showLogin>
-                <button mat-button (click)="auth.login()">Login with Google</button>
-            </ng-template>
-    
-    
         </mat-toolbar-row>
-    </mat-toolbar>
+    </mat-toolbar>-->
+
+    <div data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+        <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+        </div>
+        <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+        <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+    </div>
+    <div>
+
+        <!--Main Content Area-->
+        <main id="content">
+
+            <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+                <div id="header" class="nav-collapse nav-solid">
+                    <div class="row clearfix">
+                        <div>
+
+
+
+
+                            <!--Main Navigation-->
+                            <nav id="nav-main" class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+                                
+                                <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <!--Logo-->
+                                <div id="logo">
+                                    <!--Logo that is shown on the banner-->
+                                    <img src="../assets/images/logo-2.png" id="banner-logo" alt="Landing Page" />
+                                    <!--End of Banner Logo-->
+
+                                    <!--The Logo that is shown on the sticky Navigation Bar-->
+                                    <img src="../assets/images/logojuristartup.JPG" id="navigation-logo"
+                                        alt="Landing Page" />
+                                    <!--End of Navigation Logo-->
+                                </div>
+                                <!--End of Logo-->
+
+                                <ul>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/Home" (click)="getActiveTab('home')"
+                                            [class.active]="activetab === 'home'">Home</a>
+                                    </li>
+                                    <li class="nav-item"  >
+                                        <a class="nav-link page-scroll" routerLink="/Home2" (click)="getActiveTab('home2')"
+                                            [class.active]="activetab === 'home2'">Home2</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/About" (click)="getActiveTab('about')"
+                                            [class.active]="activetab === 'about'">About</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a  class="nav-link page-scroll" routerLink="/blog" (click)="getActiveTab('blog')"
+                                            [class.active]="activetab === 'blog'">Blog</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/Gallery" (click)="getActiveTab('gallery')"
+                                            [class.active]="activetab === 'gallery'">Gallery</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/Services" (click)="getActiveTab('services')"
+                                            [class.active]="activetab === 'services'">Services</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/Testimonials" (click)="getActiveTab('testimonials')"
+                                            [class.active]="activetab === 'testimonials'">Testimonials</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a class="nav-link page-scroll" routerLink="/Client" (click)="getActiveTab('client')"
+                                            [class.active]="activetab === 'client'">Clients</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <a routerLink="/Pricing" (click)="getActiveTab('princing')"
+                                            [class.active]="activetab === 'princing'">Pricing</a>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+                                            <span style="color:darkred">Hi {{user.displayName}} !</span>
+                                            <button mat-raised-button color="primary" routerLink="/dashboard">Write a
+                                                Post</button>
+                                            <button mat-button (click)="auth.logout()">Logout</button>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item" >
+                                        <ng-template #showLogin>
+                                            <button mat-raised-button color="primary"
+                                                (click)="auth.login()">Login</button>
+                                        </ng-template>
+                                    </li>
+                                </ul>
+
+                                
+                                <aside>
+                                        <app-social></app-social>
+                                    </aside>
+                                </div>
+                            </nav>
+                            <!--End of Main Navigation-->
+
+                            <div id="nav-trigger"><span></span></div>
+
+                            <nav id="nav-mobile"></nav>
+
+                        </div>
+                    </div>
+                </div>
+                <!--End of Header-->
+            </header>
+            <router-outlet></router-outlet>
+        </main>
+        <!--End Main Content Area-->
+    </div>
+
+    <app-footer></app-footer>
+
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/assets/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>

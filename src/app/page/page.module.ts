@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Home2Component } from './home2/home2.component';
 /*import { HomepageComponent } from './homepage/homepage.component';
 import { IntroComponent } from './intro/intro.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -16,7 +17,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 */
 
 @NgModule({
-  declarations: [/*HomepageComponent, IntroComponent, GalleryComponent, ContentComponent, TestimonialComponent, FooterComponent, ClientComponent, PrincingComponent, HeaderComponent, SocialComponent, NavigationComponent*/],
+  declarations: [/*HomepageComponent, IntroComponent, GalleryComponent, ContentComponent, TestimonialComponent, FooterComponent, ClientComponent, PrincingComponent, HeaderComponent, SocialComponent, NavigationComponent*/Home2Component],
   imports: [
     CommonModule, /*SharedModule*/ //AngularFontAwesomeModule // "../node_modules/font-awesome/css/font-awesome.css"
   ]

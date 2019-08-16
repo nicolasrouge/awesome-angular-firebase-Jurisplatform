@@ -19,6 +19,7 @@
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
@@ -68,6 +69,9 @@
                                 <ul>
                                     <li>
                                         <a routerLink="/Home" (click)="getActiveTab('home')" [class.active]="activetab === 'home'">Home</a>
+                                    </li>
+                                    <li>
+                                        <a routerLink="/Home2" (click)="getActiveTab('home2')" [class.active]="activetab === 'home2'">Home2</a>
                                     </li>
                                     <li>
                                         <a routerLink="/About" (click)="getActiveTab('about')" [class.active]="activetab === 'about'">About</a>
