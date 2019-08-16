@@ -38,7 +38,28 @@
               "src/assets/essence/css/main.css",
               "src/assets/essence/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/essence/js/jquery-min.js",
+              "src/assets/essence/js/popper.min.js",
+              "src/assets/essence/js/bootstrap.min.js",
+              "src/assets/essence/js/classie.js",
+              "src/assets/essence/js/color-switcher.js",
+              "src/assets/essence/js/jquery.mixitup.js",
+              "src/assets/essence/js/nivo-lightbox.js",
+              "src/assets/essence/js/owl.carousel.js",    
+              "src/assets/essence/js/jquery.stellar.min.js",    
+              "src/assets/essence/js/jquery.nav.js",    
+              "src/assets/essence/js/scrolling-nav.js",    
+              "src/assets/essence/js/jquery.easing.min.js",     
+              "src/assets/essence/js/wow.js", 
+              "src/assets/essence/js/jquery.vide.js",
+              "src/assets/essence/js/jquery.counterup.min.js",    
+              "src/assets/essence/js/jquery.magnific-popup.min.js",    
+              "src/assets/essence/js/waypoints.min.js",    
+              "src/assets/essence/js/form-validator.min.js",
+              "src/assets/essence/js/contact-form-script.js",   
+              "src/assets/essence/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
