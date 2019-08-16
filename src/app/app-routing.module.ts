@@ -11,7 +11,7 @@ import { HeaderComponent } from './page/header/header.component';
 import { Home2Component } from './page/home2/home2.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/Home', pathMatch: 'full' },
+  { path: '',   redirectTo: '/Home2', pathMatch: 'full' },
   { path: 'Home', component: HeaderComponent },
   { path: 'Home2', component: Home2Component },
   { path: 'About', component:IntroComponent},
