@@ -1,65 +1,4 @@
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/src/assets/images/favicon.ico" title="Favicon" />
-    <!--Icon Fonts - Font Awesome Icons-->
-    <link rel="stylesheet" type="text/css"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!--Google Webfonts-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-<!-- Header Section Start -->
-<header id="slider-area">  
-        <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
-          <div class="container">          
-            <a class="navbar-brand" href="index.html"><span class="lni-bulb"></span>ESSENCE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="lni-menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#slider-area">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#services">Services</a>
-                </li>  
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#features">Features</a>
-                </li>                            
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#portfolios">Works</a>
-                </li>            
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#pricing">Pricing</a>
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#team">Team</a>
-                </li>    
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#subscribe">Subscribe</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#blog">Blog</a>
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#contact">Contact</a>
-                </li> 
-              </ul>   
-
-            </div>
-                <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
-                    <span style="color:darkred">Hi {{user.displayName}} !</span>
-                    <button mat-raised-button color="primary"
-                        routerLink="/dashboard">Write a Post</button>
-                    <button mat-button (click)="auth.logout()">Logout</button>
-                </div>
-
-                <ng-template #showLogin>
-                    <button mat-raised-button color="primary" (click)="auth.login()">Login</button>
-                </ng-template>
-
-          </div>
-        </nav> 
-  
         <!-- Main Carousel Section -->
         <div id="carousel-area">
           <div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel">
@@ -108,9 +47,7 @@
             </a>
           </div>
         </div>  
-  
-      </header>
-      <!-- Header Section End --> 
+
   
       <!-- Services Section Start -->
       <section id="services" class="section">
