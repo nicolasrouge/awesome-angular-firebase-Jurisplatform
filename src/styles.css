@@ -9,14 +9,6 @@
     max-width: 100%;
 }
 
-/* Rows and Columns */
-.row {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 75px 0;
-    position: relative;
-}
-
 /* --------- 6.4 Gallery ---------- */
 #gallery img {
     max-height: 300px;
@@ -71,7 +63,6 @@
     position: relative;
     text-transform: uppercase;
     font-weight: bold;
-    color: #fff;
 }
 
 #clients img {
@@ -107,4 +98,3 @@
     text-align: center;
     display: inline-block;
 }
-
