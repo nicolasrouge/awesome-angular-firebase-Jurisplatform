@@ -3,17 +3,18 @@
 - Blog / Posts (CRUD)
 - HomePage / Contact Page / Our services (prices + questions + forms)
 
-- Tchat
-- Image gallery
+- Posts categories
+- Share with social networks (linkedin, facebook)
+- Word cloud
+- clean css
+- config service >> ecrire en francais
+- formulaire ok
 
 - Sign in / sign out / inscrition / reset password
 - Profil utilisateur
 
-- Share with social networks (linkedin, facebook)
-- Posts categories
-- Word cloud
-
-- Design / Dynamique / animation
+- Tchat
+- Image gallery
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
