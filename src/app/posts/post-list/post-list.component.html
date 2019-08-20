@@ -1,33 +1,38 @@
 <!-- Blog Section -->
 <section id="blog" class="section">
-    <!-- Container Starts -->
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Blogs</h2>
-        <span>Blogs</span>
-        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
-      </div>
-      <div class="row">
-        
-        <div class="col-lg-4 col-md-6 col-xs-12 blog-item" *ngFor="let post of posts | async"> 
+  <!-- Container Starts -->
+  <div class="container">
+
+    <div class="section-header">
+      <h2 class="section-title">Blogs</h2>
+      <span>Blogs</span>
+      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+
+        <div class="row">
+
+          <div class="col col-lg-4 col-md-6 col-xs-12 blog-item" *ngFor="let post of posts | async">
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
                 <a routerLink="{{post.id}}">
-                    <img src="{{post.image}}" alt="{{post.title}}">
+                  <img src="{{post.image}}" alt="{{post.title}}">
                 </a>
               </div>
               <div class="blog-item-text">
-                  <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
-                  <h3><a routerLink="{{post.id}}">{{post.title}}</a></h3>
-                  <p>
-                    <small>Posted by {{post.author}}</small>
-                  </p>
-                  <div class="meta-tags" *ngIf="auth.currentUserId === post.authorId">
-                      <button mat-icon-button (click)="delete(post.id)">
-                          <mat-icon>delete</mat-icon>
-                        </button>
-                    </div>
+                <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
+                <h3><a routerLink="{{post.id}}">{{post.title}}</a></h3>
+                <p>
+                  <small>Posted by {{post.author}}</small>
+                </p>
+                <div class="meta-tags" *ngIf="auth.currentUserId === post.authorId">
+                  <button mat-icon-button (click)="delete(post.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
                 <div class="meta-tags">
                   <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
                   <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
@@ -38,73 +43,143 @@
             <!-- Blog Item Wrapper Ends-->
           </div>
 
-          <div class="row">
-              <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-                <!-- Blog Item Starts -->
-                <div class="blog-item-wrapper">
-                  <div class="blog-item-img">
-                    <a href="single-post.html">
-                      <img src="../assets/essence/img/blog/img1.jpg" alt="">
-                    </a>
-                  </div>
-                  <div class="blog-item-text">
-                    <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
-                    <h3><a href="single-post.html">10 Tips to Design a High-converting Landing Page</a></h3>
-                    <div class="meta-tags">
-                      <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
-                      <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
-                      <span><a href="#"><i class="lni-reply"></i> 332</a></span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Blog Item Wrapper Ends-->
+          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <!-- Blog Item Starts -->
+            <div class="blog-item-wrapper">
+              <div class="blog-item-img">
+                <a href="single-post.html">
+                  <img src="../assets/essence/img/blog/img1.jpg" alt="">
+                </a>
               </div>
-        
-              <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-                <!-- Blog Item Starts -->
-                <div class="blog-item-wrapper">
-                  <div class="blog-item-img">
-                    <a href="single-post.html">
-                      <img src="../assets/essence/img/blog/img2.jpg" alt="">
-                    </a>
-                  </div>
-                  <div class="blog-item-text">
-                    <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
-                    <h3><a href="single-post.html">How to Design a Website For Your App</a></h3>
-                    <div class="meta-tags">
-                      <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
-                      <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
-                      <span><a href="#"><i class="lni-reply"></i> 332</a></span>
-                    </div>
-                  </div>
+              <div class="blog-item-text">
+                <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
+                <h3><a href="single-post.html">10 Tips to Design a High-converting Landing Page</a></h3>
+                <div class="meta-tags">
+                  <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
+                  <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
+                  <span><a href="#"><i class="lni-reply"></i> 332</a></span>
                 </div>
-                <!-- Blog Item Wrapper Ends-->
-              </div>
-        
-              <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-                <!-- Blog Item Starts -->
-                <div class="blog-item-wrapper">
-                  <div class="blog-item-img">
-                    <a href="single-post.html">
-                      <img src="../assets/essence/img/blog/img3.jpg" alt="">
-                    </a>
-                  </div>
-                  <div class="blog-item-text">
-                    <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
-                    <h3><a href="single-post.html">7 Secretes to Optimize Loading Speed of Your Site</a></h3>
-                    <div class="meta-tags">
-                      <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
-                      <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
-                      <span><a href="#"><i class="lni-reply"></i> 332</a></span>
-                    </div>
-                  </div>
-                </div>
-                <!-- Blog Item Wrapper Ends-->
               </div>
             </div>
+            <!-- Blog Item Wrapper Ends-->
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <!-- Blog Item Starts -->
+            <div class="blog-item-wrapper">
+              <div class="blog-item-img">
+                <a href="single-post.html">
+                  <img src="../assets/essence/img/blog/img2.jpg" alt="">
+                </a>
+              </div>
+              <div class="blog-item-text">
+                <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
+                <h3><a href="single-post.html">How to Design a Website For Your App</a></h3>
+                <div class="meta-tags">
+                  <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
+                  <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
+                  <span><a href="#"><i class="lni-reply"></i> 332</a></span>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Item Wrapper Ends-->
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+            <!-- Blog Item Starts -->
+            <div class="blog-item-wrapper">
+              <div class="blog-item-img">
+                <a href="single-post.html">
+                  <img src="../assets/essence/img/blog/img3.jpg" alt="">
+                </a>
+              </div>
+              <div class="blog-item-text">
+                <div class="date"><i class="lni-calendar"></i>10 April, 2018</div>
+                <h3><a href="single-post.html">7 Secretes to Optimize Loading Speed of Your Site</a></h3>
+                <div class="meta-tags">
+                  <span><a href="#"><i class="lni-eye"></i> 4.5k Views</a></span>
+                  <span><a href="#"><i class="lni-bubble"></i> 07</a></span>
+                  <span><a href="#"><i class="lni-reply"></i> 332</a></span>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Item Wrapper Ends-->
+          </div>
 
         </div>
-      </div>
-    </section>
-    <!-- blog Section End -->
+        <!-- /.row  -->
 
+      </div>
+      <!-- /.div class="col-lg-8" -->
+
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Recherche</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">OK</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Catégories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Startup</a>
+                  </li>
+                  <li>
+                    <a href="#">Blockchain</a>
+                  </li>
+                  <li>
+                    <a href="#">Contrat</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Ethereum</a>
+                  </li>
+                  <li>
+                    <a href="#">Moratoire</a>
+                  </li>
+                  <li>
+                    <a href="#">Apprentissage</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- Side Widget -->
+      <div class="card my-4">
+          <h5 class="card-header">Side Widget</h5>
+          <div class="card-body">
+            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          </div>
+        </div>
+
+      </div>
+      <!-- /.div class="col-md-4" -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</section>
+<!-- blog Section End -->
