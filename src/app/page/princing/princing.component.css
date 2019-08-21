@@ -46,3 +46,17 @@ header {
       display: none;
     }
   }
+
+  section{
+    padding-top:70px;
+}
+
+mat-card{
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+
+mat-form-field {
+    width: 100%;
+}
