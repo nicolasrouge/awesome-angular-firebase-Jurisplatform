@@ -14,7 +14,7 @@ mat-card{
 img{
     width: 100%;
     max-width: 800px;
-    max-height: 300px;
+    max-height: 340px;
 }
 /*
 mat-card-content:focus {
