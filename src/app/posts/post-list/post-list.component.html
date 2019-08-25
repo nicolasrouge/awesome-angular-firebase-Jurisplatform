@@ -9,12 +9,73 @@
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
     </div>
 
+    <!--contient les deux colonnes-->
     <div class="row">
+
+      <!-- colonne catégorie -->
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-3">
+
+        <!-- formulaire catégorie : https://mdbootstrap.com/docs/jquery/forms/select/ -->
+        <select class="browser-default custom-select custom-select-lg mb-3" title="title" name="name"
+          [(ngModel)]="category" (change)="filtrarData('bloblo')">
+          <option value="bloblo">Blockchain</option>
+          <option value="bloblo">Juridique</option>
+          <option value="bloblo">Bitcoin</option>
+          <option value="bloblo">Nouvelles technologies</option>
+        </select>
+
+        <button *ngIf="category" (click)="removeFilter('category')">
+          Remove filter
+        </button>
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Prochainement => Recherche</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">OK</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Prochainement => liste des catégories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.div class="col-md-4" -->
+
+
+      <!-- colonne articles -->
       <div class="col-lg-8">
 
         <div class="row">
-
-          <div class="col col-lg-6 col-md-6 col-xs-12 blog-item" *ngFor="let post of posts | async">
+            <div class="row justify-content-center">
+             
+          <div class="col col-lg-5 col-md-6 col-xs-12 blog-item" *ngFor="let post of posts | async">
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
@@ -25,7 +86,9 @@
               <div class="blog-item-text">
                 <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
                 <h3><a routerLink="{{post.id}}">{{post.title}}</a></h3>
-                <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</small></p>
+                <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error
+                    quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae
+                    laborum minus inventore?</small></p>
                 <p>
                   <small>By {{post.author}} </small>
                 </p>
@@ -44,7 +107,7 @@
             <!-- Blog Item Wrapper Ends-->
           </div>
 
-          <div class="col-lg-6 col-md-6 col-xs-12 blog-item">
+          <div class="col-lg-5 col-md-6 col-xs-12 blog-item">
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
@@ -65,7 +128,7 @@
             <!-- Blog Item Wrapper Ends-->
           </div>
 
-          <div class="col-lg-6 col-md-6 col-xs-12 blog-item">
+          <div class="col-lg-5 col-md-6 col-xs-12 blog-item">
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
@@ -86,7 +149,7 @@
             <!-- Blog Item Wrapper Ends-->
           </div>
 
-          <div class="col-lg-6 col-md-6 col-xs-12 blog-item">
+          <div class="col-lg-5 col-md-6 col-xs-12 blog-item">
             <!-- Blog Item Starts -->
             <div class="blog-item-wrapper">
               <div class="blog-item-img">
@@ -109,76 +172,11 @@
 
         </div>
         <!-- /.row  -->
-
+      </div>
+       <!-- center -->
       </div>
       <!-- /.div class="col-lg-8" -->
 
-
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-          <select class="browser-default custom-select custom-select-lg mb-3" [(ngModel)]="category" (change)="filtrarData('bloblo')">
-              <option value="bloblo">Blockchain</option>
-              <option value="bloblo">Juridique</option>
-              <option value="bloblo">Bitcoin</option>
-              <option value="bloblo">Nouvelles technologies</option>
-            </select>
-          
-            <button *ngIf="category"
-                    (click)="removeFilter('category')">
-                    Remove filter
-            </button>
-
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Recherche</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">OK</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Catégories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Startup</a>
-                  </li>
-                  <li>
-                    <a href="#">Blockchain</a>
-                  </li>
-                  <li>
-                    <a href="#">Contrat</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Ethereum</a>
-                  </li>
-                  <li>
-                    <a href="#">Moratoire</a>
-                  </li>
-                  <li>
-                    <a href="#">Apprentissage</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- /.div class="col-md-4" -->
 
     </div>
     <!-- /.row -->
