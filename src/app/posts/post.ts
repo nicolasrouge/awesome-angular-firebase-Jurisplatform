@@ -6,5 +6,6 @@ export class Post {
     image: string
     published: Date
     title: string
+    category: string
   }
   

@@ -15,6 +15,7 @@ export class PostDashboardComponent implements OnInit {
   title: string
   image: string = null
   content: string
+  category: string
 
   buttonText: string = "Create Post"
   uploadPercent: Observable<number>
@@ -35,7 +36,8 @@ export class PostDashboardComponent implements OnInit {
       content: this.content,
       image: this.image,
       published: new Date(),
-      title: this.title
+      title: this.title,
+      category: this.category
     }
     this.postService.create(data)
     this.title = ''

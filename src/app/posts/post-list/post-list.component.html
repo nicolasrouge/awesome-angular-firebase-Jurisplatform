@@ -27,7 +27,7 @@
                 <h3><a routerLink="{{post.id}}">{{post.title}}</a></h3>
                 <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</small></p>
                 <p>
-                  <small>By {{post.author}}</small>
+                  <small>By {{post.author}} </small>
                 </p>
                 <div class="meta-tags" *ngIf="auth.currentUserId === post.authorId">
                   <button mat-icon-button (click)="delete(post.id)">
@@ -117,6 +117,18 @@
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
 
+          <select class="browser-default custom-select custom-select-lg mb-3" [(ngModel)]="category" (change)="filtrarData('bloblo')">
+              <option value="bloblo">Blockchain</option>
+              <option value="bloblo">Juridique</option>
+              <option value="bloblo">Bitcoin</option>
+              <option value="bloblo">Nouvelles technologies</option>
+            </select>
+          
+            <button *ngIf="category"
+                    (click)="removeFilter('category')">
+                    Remove filter
+            </button>
+
         <!-- Search Widget -->
         <div class="card my-4">
           <h5 class="card-header">Recherche</h5>
@@ -162,23 +174,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
-          <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new
-            Bootstrap 4 card containers!
-          </div>
-        </div>
-
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h4 class="card-title">Primary card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
 

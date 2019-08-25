@@ -9,6 +9,7 @@ import { ClientComponent } from './page/client/client.component';
 import { PrincingComponent } from './page/princing/princing.component';
 import { HeaderComponent } from './page/header/header.component';
 import { Home2Component } from './page/home2/home2.component';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/Home2', pathMatch: 'full' },
@@ -23,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AngularFireDatabaseModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
