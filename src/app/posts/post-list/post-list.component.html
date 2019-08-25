@@ -20,13 +20,12 @@
         <!-- formulaire catégorie : https://mdbootstrap.com/docs/jquery/forms/select/ -->
         <select class="browser-default custom-select custom-select-lg mb-3" 
           [(ngModel)]="category" (change)="filtrarData(category)">
-          <option value="bloblo">Blockchain</option>
-          <option value="bloblo">Juridique</option>
-          <option value="bloblo">Bitcoin</option>
-          <option value="bloblo">Nouvelles technologies</option>
+          <option value="run">Run</option>
+          <option value="scale">Scale</option>
+          <option value="lati">Lati</option>
         </select>
 
-        <button *ngIf="category" (click)="removeFilter('category')">
+        <button type="button" class="btn btn-secondary" *ngIf="category" (click)="removeFilter('category')">
           Remove filter
         </button>
 

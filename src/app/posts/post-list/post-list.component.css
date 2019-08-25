@@ -21,3 +21,6 @@ mat-card-content:focus {
     outline: none;
     border: 0;
 }*/
+section{
+    background: gainsboro;
+}
