@@ -22,5 +22,9 @@ mat-card-content:focus {
     border: 0;
 }*/
 section{
-    background: gainsboro;
+    background:  	#EFEFEF;
+    
+}
+a{
+    color: black;
 }
