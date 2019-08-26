@@ -13,8 +13,8 @@ mat-card{
 }*/
 img{
     width: 100%;
-    max-width: 800px;
-    max-height: 340px;
+    max-width: 500px;
+    max-height: 300px;
 }
 /*
 mat-card-content:focus {
@@ -22,7 +22,7 @@ mat-card-content:focus {
     border: 0;
 }*/
 section{
-    background:  	#EFEFEF;
+    background:#EFEFEF;
     
 }
 a{
