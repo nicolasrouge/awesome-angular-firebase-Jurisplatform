@@ -15,7 +15,7 @@ export class PostDashboardComponent implements OnInit {
   title: string
   image: string = null
   content: string
-  category: string
+  category: string = 'test'
 
   buttonText: string = "Create Post"
   uploadPercent: Observable<number>
@@ -43,6 +43,7 @@ export class PostDashboardComponent implements OnInit {
     this.title = ''
     this.content = ''
     this.buttonText = 'Post Created!'
+    this.category = 'test'
     setTimeout(() => (this.buttonText = "Create Post"), 3000)
   }
 
