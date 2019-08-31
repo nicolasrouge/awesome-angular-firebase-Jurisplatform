@@ -11,11 +11,7 @@ mat-card{
     margin: 10px 0;
     max-width: 700px;
 }*/
-img{
-    width: 100%;
-    max-width: 500px;
-    max-height: 300px;
-}
+
 /*
 mat-card-content:focus {
     outline: none;
@@ -27,4 +23,7 @@ section{
 }
 a{
     color: black;
+}
+.col{
+    margin-bottom: 15px;
 }

@@ -1796,6 +1796,8 @@ button:focus {
 #blog .blog-item-img img {
   width: 100%;
   border-radius: 4px;
+  max-width: 500px;
+  max-height: 300px;
 }
 
 #blog .blog-item-text {
