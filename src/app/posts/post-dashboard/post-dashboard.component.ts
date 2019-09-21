@@ -14,7 +14,7 @@ export class PostDashboardComponent implements OnInit {
 
   title: string
   image: string = null
-  content: string
+  content: string = ''
   category: string = 'test'
 
   buttonText: string = "Create Post"
@@ -22,8 +22,8 @@ export class PostDashboardComponent implements OnInit {
   downloadURL: Observable<string>
 
   constructor(
-    private auth: AuthService, 
-    private postService: PostService, 
+    private auth: AuthService,
+    private postService: PostService,
     private storage: AngularFireStorage) { }
 
   ngOnInit() {
@@ -46,12 +46,11 @@ export class PostDashboardComponent implements OnInit {
     this.category = 'test'
     setTimeout(() => (this.buttonText = "Create Post"), 3000)
   }
-
-  uploadImage(event) { 
+  uploadImage(event) {
     const file = event.target.files[0]
     const path = `posts/${file.name}`
     console.log(event.target.files)
-    if(file.type.split('/')[0] !== 'image'){
+    if (file.type.split('/')[0] !== 'image') {
       return alert('only image files')
     }
     else {
@@ -65,7 +64,7 @@ export class PostDashboardComponent implements OnInit {
           this.downloadURL.subscribe(url => (this.image = url));
         })
       )
-      .subscribe();
+        .subscribe();
     }
-   }
+  }
 }

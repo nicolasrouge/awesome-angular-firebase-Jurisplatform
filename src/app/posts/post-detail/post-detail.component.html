@@ -1,39 +1,47 @@
 <section>
-<ng-container *ngIf="post">
-    <div [hidden]="!editing">
-        <mat-card>
-            <h2>Update Post</h2>
-        
-        <mat-form-field>
-            <input matInput placeholder="Post title" [(ngModel)]="post.title">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <textarea matInput placeholder="Post content" [(ngModel)]="post.content" rows="20"></textarea>
-        </mat-form-field>
-        <br>
-        <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
-        <button mat-button (click)="editing=false">Cancel</button>
-    </mat-card>
-    </div>
-    <div [hidden]="editing">
-        <mat-card>
-            <mat-card-content>
-                <img src="{{post.image}}" alt="{{post.title}}">
-                <h2>{{post.title}}</h2>
-                <p>posted by {{post.author}} &bull; {{post.published | date: 'fullDate'}}</p>
-                {{post.content}}
-            </mat-card-content>
-
-            <mat-card-actions *ngIf="auth.currentUserId === post.authorId">
-                <button mat-icon-button (click)="editing=true">
-                    <mat-icon>edit</mat-icon>
-                </button>
-                <button mat-icon-button (click)="delete()">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-</ng-container>
+    <ng-container *ngIf="post">
+        <div [hidden]="!editing">
+            <mat-card>
+                <h2>Update Post</h2>
+                <div [innerHTML]="post.content"></div>
+                <mat-form-field>
+                    <input matInput placeholder="Post title" [(ngModel)]="post.title">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <textarea matInput placeholder="Post content" [(ngModel)]="post.content" rows="20">
+            </textarea>
+                </mat-form-field>
+                <br>
+                <button mat-raised-button color="accent" (click)="updatePost()">Save</button>
+                <button mat-button (click)="editing=false">Cancel</button>
+            </mat-card>
+        </div>
+        <div [hidden]="editing">
+            <mat-card>
+                <mat-card-content>
+                    <!-- Title -->
+                    <h1 class="mt-4">{{post.title}}</h1>
+                    <!-- Author -->
+                    <p class="lead">
+                        by <a href="#">{{post.author}} </a>
+                    </p>
+                    <hr>
+                    <!-- Date/Time -->
+                    <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
+                    <hr>
+                    <img src="{{post.image}}" alt="{{post.title}}">
+                    <div [innerHTML]="post.content"></div>
+                </mat-card-content>
+                <mat-card-actions *ngIf="auth.currentUserId === post.authorId">
+                    <button mat-icon-button (click)="editing=true">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="delete()">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </ng-container>
 </section>
