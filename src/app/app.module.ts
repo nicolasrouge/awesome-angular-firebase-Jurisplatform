@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { PostsModule } from './posts/posts.module';
-import { HomepageComponent } from './page/homepage/homepage.component';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
@@ -24,7 +23,6 @@ import { ConfigService } from './config.service';
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
   { path: '', loadChildren: './posts/posts.module#PostsModule'},
-  //{ path: 'home', component: HomepageComponent },
 ]
 
 @NgModule({

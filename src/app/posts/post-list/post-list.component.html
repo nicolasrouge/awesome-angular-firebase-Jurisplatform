@@ -48,14 +48,13 @@
                   </a>
                 </div>
                 <div class="col blog-item-text">
-                   <h3><span class="badge badge-secondary">{{post.category}}</span></h3>
+                   <div><span class="badge badge-secondary">{{post.category}}</span></div>
                    
                   <h2><a routerLink="{{post.id}}">{{post.title}}</a></h2>
                   <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
                   <p>Par {{post.author}}</p>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo 
-                    saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore? [...]
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. [...]
                   </p>
                   <div class="meta-tags" *ngIf="auth.currentUserId === post.authorId">
                     <button mat-icon-button (click)="delete(post.id)">
