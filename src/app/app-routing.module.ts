@@ -7,13 +7,11 @@ import { ContentComponent } from './page/content/content.component';
 import { TestimonialComponent } from './page/testimonial/testimonial.component';
 import { ClientComponent } from './page/client/client.component';
 import { PrincingComponent } from './page/princing/princing.component';
-import { HeaderComponent } from './page/header/header.component';
 import { HomeComponent } from './page/home/home.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/Home', pathMatch: 'full' },
-  { path: 'Header', component: HeaderComponent },
   { path: 'Home', component: HomeComponent },
   { path: 'About', component:IntroComponent},
   { path: 'Gallery', component: GalleryComponent},
