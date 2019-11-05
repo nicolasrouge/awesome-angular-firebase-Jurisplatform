@@ -57,7 +57,8 @@
               "src/assets/essence/js/waypoints.min.js",    
               "src/assets/essence/js/form-validator.min.js",
               "src/assets/essence/js/contact-form-script.js",   
-              "src/assets/essence/js/main.js"
+              "src/assets/essence/js/main.js",
+              "node_modules/jquery/dist/jquery.min.js",
             ]
           },
           "configurations": {

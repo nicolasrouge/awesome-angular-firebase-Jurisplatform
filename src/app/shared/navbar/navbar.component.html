@@ -26,9 +26,19 @@
                         <a class="nav-link page-scroll" routerLink="/About" (click)="getActiveTab('about')"
                             [class.active]="activetab === 'about'">L'équipe</a>
                     </li>
-                    <li>
-                        <a class="nav-link page-scroll" routerLink="/blog" (click)="getActiveTab('blog')"
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Articles
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" routerLink="/blog" (click)="getActiveTab('blog')"
                             [class.active]="activetab === 'blog'">Articles</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
                     </li>
                     <li>
                         <a class="nav-link page-scroll" routerLink="/Gallery" (click)="getActiveTab('gallery')"
@@ -64,8 +74,8 @@
                     </li>
                 </ul>
 
-                    <!--Social Icons in Header-->
-                    <!--<ul class="social-banner-icons">
+                <!--Social Icons in Header-->
+                <!--<ul class="social-banner-icons">
                         <li>
                             <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
                                 <i class="fa fa-facebook fa-2x"></i><span>Facebook</span>
@@ -82,7 +92,7 @@
                             </a>
                         </li>
                     </ul>-->
-                    <!--End of Social Icons in Header-->
+                <!--End of Social Icons in Header-->
 
             </div>
         </div>
