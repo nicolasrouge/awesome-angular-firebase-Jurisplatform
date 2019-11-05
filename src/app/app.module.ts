@@ -19,6 +19,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MatButtonModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { PageModule } from './page/page.module';
 import { ConfigService } from './config.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
@@ -45,6 +46,7 @@ const routes: Routes = [
     MatCardModule, 
     MatToolbarModule, 
     PageModule,
+    NgbModule,
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

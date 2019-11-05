@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Post } from '../post';
 import { PostService } from '../post.service';
 import { AuthService } from 'src/app/core/auth.service';
 import * as _ from 'lodash';
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
