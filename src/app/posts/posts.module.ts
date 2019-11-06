@@ -6,6 +6,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostService } from './post.service';
 import { SharedModule } from '../shared/shared.module';
+import { SidenavBackdropComponent } from './sidenav-backdrop/sidenav-backdrop.component';
+import { SimpleAutocompleteComponent } from './simple-autocomplete/simple-autocomplete.component';
 
 const routes: Routes = [
   { path: 'blog', component: PostListComponent },
@@ -14,7 +16,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent],
+  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent, SidenavBackdropComponent, SimpleAutocompleteComponent],
   imports: [
     SharedModule, RouterModule.forChild(routes)
   ],

@@ -12,6 +12,10 @@ import { TestimonialComponent } from '../page/testimonial/testimonial.component'
 import { FooterComponent } from '../page/footer/footer.component';
 import { ClientComponent } from '../page/client/client.component';
 import { PrincingComponent } from '../page/princing/princing.component';
+import { MatChipsModule } from '@angular/material';
+
+import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { PrincingComponent } from '../page/princing/princing.component';
     CommonModule,
     MaterialModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    MatChipsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule,
@@ -36,6 +43,9 @@ import { PrincingComponent } from '../page/princing/princing.component';
     FormsModule,
     NavbarComponent,
     RouterModule,
+    MatChipsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
 })
 export class SharedModule { }

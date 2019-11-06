@@ -21,6 +21,12 @@ import { PageModule } from './page/page.module';
 import { ConfigService } from './config.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
+
+
+import {MatChipsModule} from '@angular/material/chips'; 
+import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full'},
   { path: '', loadChildren: './posts/posts.module#PostsModule'},
@@ -47,6 +53,8 @@ const routes: Routes = [
     MatToolbarModule, 
     PageModule,
     NgbModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]
