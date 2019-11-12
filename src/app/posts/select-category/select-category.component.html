@@ -1,0 +1,10 @@
+<mat-form-field>
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected" (selectionChange)="filtrarData($event.value)">
+        <mat-option>None</mat-option>
+        <mat-option value="Run">Run</mat-option>
+        <mat-option value="scale">Scale</mat-option>
+        <mat-option value="lati">Blockchain</mat-option>
+    </mat-select>
+</mat-form-field>
+<p>You selected: {{selected}}</p>

@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { SidenavBackdropComponent } from './sidenav-backdrop/sidenav-backdrop.component';
 import { SimpleAutocompleteComponent } from './simple-autocomplete/simple-autocomplete.component';
 import { ExpansioPpanelComponent } from './expansio-ppanel/expansio-ppanel.component';
+import { SelectCategoryComponent } from './select-category/select-category.component';
 
 const routes: Routes = [
   { path: 'blog', component: PostListComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent, SidenavBackdropComponent, SimpleAutocompleteComponent, ExpansioPpanelComponent],
+  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent, SidenavBackdropComponent, SimpleAutocompleteComponent, ExpansioPpanelComponent, SelectCategoryComponent],
   imports: [
     SharedModule, RouterModule.forChild(routes)
   ],
