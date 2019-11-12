@@ -1,0 +1,26 @@
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          I - Blockchain
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-sidenav-backdrop></app-sidenav-backdrop>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          II - 5G
+        </mat-panel-title>
+        <mat-panel-description>
+            {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-sidenav-backdrop></app-sidenav-backdrop>
+    </mat-expansion-panel>
+  </mat-accordion>
+  

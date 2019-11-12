@@ -16,6 +16,7 @@ import { MatChipsModule } from '@angular/material';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestimonialComponent, 
     FooterComponent, 
     ClientComponent, 
-    PrincingComponent, 
+    PrincingComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     MatChipsModule,
     MatAutocompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule
   ],
   exports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     MatChipsModule,
     MatAutocompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule
   ],
 })
 export class SharedModule { }

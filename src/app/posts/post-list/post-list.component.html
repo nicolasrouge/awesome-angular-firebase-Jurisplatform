@@ -11,21 +11,21 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="https://picsum.photos/900/100" alt="First slide">
+              <img class="d-block w-100" src="../assets/essence/img/architecture.jpg" alt="First slide">
               <div class="carousel-caption text-center">
-                  <h1 class="wow fadeInRight">News - Blockchain</h1> 
+                  <h1 class="wow fadeInRight carouseltitle">News - Blockchain</h1> 
                 </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="https://picsum.photos/900/100" alt="Second slide">
+              <img class="d-block w-100" src="../assets/essence/img/architecture.jpg" alt="First slide">
               <div class="carousel-caption text-center">
-                  <h1 class="wow fadeInRight">News - Online Banking</h1> 
+                  <h1 class="wow fadeInRight carouseltitle">News - Online Banking</h1> 
                 </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="https://picsum.photos/900/100" alt="Third slide">
+              <img class="d-block w-100" src="../assets/essence/img/architecture.jpg" alt="First slide">
               <div class="carousel-caption text-center">
-                  <h1 class="wow fadeInRight">News - 5G Network Cybersecurity</h1> 
+                  <h1 class="wow fadeInRight carouseltitle">News - 5G Network Cybercecurity</h1> 
                 </div>
             </div>
           </div>
@@ -53,20 +53,21 @@
       <!-- Sidebar Widgets Column -->
       <div class="col-md-3">
 
-        <h1>Filter par catégorie</h1>
+      <br>
         <!-- formulaire catégorie : https://mdbootstrap.com/docs/jquery/forms/select/ -->
         <select class="browser-default custom-select custom-select-lg mb-3" [(ngModel)]="category"
           (change)="filtrarData(category)">
           <option value="run">Run</option>
           <option value="scale">Scale</option>
-          <option value="lati">Lati</option>
+          <option value="lati">Blockchain</option>
         </select>
 
         <button type="button" class="btn btn-secondary" *ngIf="category" (click)="removeFilter('category')">
           Remove filter
-        </button>        
-        <app-sidenav-backdrop></app-sidenav-backdrop>
-        <app-simple-autocomplete></app-simple-autocomplete>
+        </button>
+        <br>
+        <!--<app-simple-autocomplete></app-simple-autocomplete>-->
+        <app-expansio-ppanel></app-expansio-ppanel>
       </div>
       <!-- /.div class="col-md-4" -->
 
@@ -86,7 +87,7 @@
                   </a>
                 </div>
                 <div class="col blog-item-text">
-                   <div><span class="badge badge-secondary">{{post.category}}</span></div>
+                   <mat-chip>{{post.category}}</mat-chip>
                    
                   <h2><a routerLink="{{post.id}}">{{post.title}}</a></h2>
                   <div class="date"><i class="lni-calendar"></i>{{post.published.toDate() | date: 'fullDate'}}</div>
