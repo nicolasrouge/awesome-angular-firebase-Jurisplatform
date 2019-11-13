@@ -29,7 +29,14 @@ export class PostListComponent implements OnInit {
   }
 
   filtrarData(categoriaToFilter: string) {
-    this.posts = this.postService.getPostsFilter(categoriaToFilter)
+    if(categoriaToFilter != 'all'){
+      this.posts = this.postService.getPostsFilter(categoriaToFilter)
+    }
+    else{
+      this.posts = this.postService.getPosts()
+    }
+    console.log(categoriaToFilter)
+    console.log(this.posts)
 }
 
   /// removes filter

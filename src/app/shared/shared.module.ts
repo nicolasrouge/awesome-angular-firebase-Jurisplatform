@@ -16,7 +16,9 @@ import { MatChipsModule } from '@angular/material';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion'; 
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select'; 
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatChipsModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSelectModule,
+    MatSidenavModule
   ],
   exports: [
     CommonModule,
@@ -48,7 +52,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatChipsModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSelectModule,
+    MatSidenavModule
   ],
 })
 export class SharedModule { }

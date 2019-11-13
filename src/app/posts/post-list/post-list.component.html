@@ -39,12 +39,20 @@
           </a>
         </div>
 
-<!---
-    <div class="section-header">
-      <h2 class="section-title">Articles</h2>
-      <span>Blogs</span>
-      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis.</p>
-    </div>-->
+        <mat-sidenav-container
+        class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+      <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+        <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
+      </mat-sidenav>
+    
+      <mat-sidenav-content>
+        <p><button mat-button (click)="sidenav.open()">Open</button></p>
+        <p>Closed due to: {{reason}}</p>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+    
+    <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+    
 
     <!--contient les deux colonnes-->
     <div class="row justify-content-around">
@@ -52,21 +60,18 @@
       <!-- colonne catégorie -->
       <!-- Sidebar Widgets Column -->
       <div class="col-md-3">
-
-      <br>
-        <!-- formulaire catégorie : https://mdbootstrap.com/docs/jquery/forms/select/ -->
-        <select class="browser-default custom-select custom-select-lg mb-3" [(ngModel)]="category"
-          (change)="filtrarData(category)">
-          <option value="run">Run</option>
-          <option value="scale">Scale</option>
-          <option value="lati">Blockchain</option>
-        </select>
-
-        <button type="button" class="btn btn-secondary" *ngIf="category" (click)="removeFilter('category')">
-          Remove filter
-        </button>
+        
         <br>
-        <app-select-category></app-select-category>
+        <mat-form-field>
+          <mat-label>Select a category</mat-label>
+          <mat-select [(value)]="selected" (selectionChange)="filtrarData($event.value)">
+              <mat-option value="all">None</mat-option>
+              <mat-option value="run">Run</mat-option>
+              <mat-option value="scale">Scale</mat-option>
+              <mat-option value="lati">Blockchain</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <p>You selected: {{selected}}</p>
         <!--<app-simple-autocomplete></app-simple-autocomplete>-->
         <app-expansio-ppanel></app-expansio-ppanel>
       </div>
