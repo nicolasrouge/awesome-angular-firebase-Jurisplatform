@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PostService } from '../post.service';
 import { AuthService } from 'src/app/core/auth.service';
 import * as _ from 'lodash';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-post-list',

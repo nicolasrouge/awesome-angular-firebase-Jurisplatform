@@ -18,7 +18,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent, SidenavBackdropComponent, SimpleAutocompleteComponent, ExpansioPpanelComponent, SelectCategoryComponent],
+  declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent, SidenavBackdropComponent, SimpleAutocompleteComponent, ExpansioPpanelComponent, SelectCategoryComponent,],
   imports: [
     SharedModule, RouterModule.forChild(routes)
   ],

@@ -19,6 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button'; 
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ReactiveFormsModule,
     MatExpansionModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatButtonModule
   ],
   exports: [
     CommonModule,
@@ -54,7 +59,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ReactiveFormsModule,
     MatExpansionModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatButtonModule
   ],
 })
 export class SharedModule { }
