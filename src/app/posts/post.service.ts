@@ -13,7 +13,6 @@ import { map } from "rxjs/operators";
 })
 export class PostService {
   postsCollection: AngularFirestoreCollection<Post>
-  postDoc: AngularFirestoreDocument<Post>
 
   constructor(private afs: AngularFirestore) {
     this.postsCollection = this.afs.collection('posts', ref =>
@@ -57,6 +56,7 @@ getPostsFilter(categoriaToFilter: string) {
     return this.postDoc = this.afs.doc<Post>(`posts/${id}`)
 
   }
+
   delete(id: string) {
     return this.getPost(id).delete()
   }
