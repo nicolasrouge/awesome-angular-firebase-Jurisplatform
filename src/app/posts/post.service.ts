@@ -45,8 +45,6 @@ getPostsFilter(categoriaToFilter: string) {
     })
   }));
 }
-
-
   getPostData(id: string) {
     this.postDoc = this.afs.doc<Post>(`posts/${id}`)
     return this.postDoc.valueChanges()

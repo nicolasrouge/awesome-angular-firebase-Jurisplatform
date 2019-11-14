@@ -23,6 +23,10 @@
                 <textarea matInput placeholder="Post content" [(ngModel)]="content" rows="20"></textarea>
             </mat-form-field>
             <br>
+            <mat-form-field>
+                    <input matInput placeholder="Post category" [(ngModel)]="category">
+                </mat-form-field>
+                <br>
             <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content || !image">{{buttonText}}</button>
 
         </mat-expansion-panel>
