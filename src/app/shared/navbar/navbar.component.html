@@ -20,25 +20,36 @@
                 <ul class="navbar-nav mr-auto w-100 justify-content">
                     <li>
                         <a class="nav-link page-scroll" routerLink="/Home" (click)="getActiveTab('home')"
-                            [class.active]="activetab === 'home'">Accueil</a>
+                            [class.active]="activetab === 'home'">Home</a>
                     </li>
                     <li>
                         <a class="nav-link page-scroll" routerLink="/About" (click)="getActiveTab('about')"
-                            [class.active]="activetab === 'about'">L'équipe</a>
+                            [class.active]="activetab === 'about'">Team</a>
                     </li>
+                    <li>
+                        <a class="nav-link page-scroll" routerLink="/blog" (click)="getActiveTab('blog')"
+                            [class.active]="activetab === 'blog'">News</a>
+                    </li><!-- liste deroulante-->
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">Articles
+                            aria-haspopup="true" aria-expanded="false">News
                         </a>
+                        
                         <div class="dropdown-menu">
                             <a class="dropdown-item" routerLink="/blog" (click)="getActiveTab('blog')"
-                            [class.active]="activetab === 'blog'">Articles</a>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            [class.active]="activetab === 'blog'">Last news</a>
+                            <a class="dropdown-item" href="#"></a>
+                            <a class="dropdown-item" href="#">Last news</a>
                             <a class="dropdown-item" href="#">Something else here</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Separated link</a>
                         </div>
+                    </li>-->
+                    <li>
+                        <a class="nav-link page-scroll" routerLink="/Testimonials"
+                            (click)="getActiveTab('testimonials')"
+                            [class.active]="activetab === 'testimonials'">Online Counsel</a>
                     </li>
                     <li>
                         <a class="nav-link page-scroll" routerLink="/Gallery" (click)="getActiveTab('gallery')"
@@ -47,11 +58,6 @@
                     <li>
                         <a class="nav-link page-scroll" routerLink="/Services" (click)="getActiveTab('services')"
                             [class.active]="activetab === 'services'">Savoir-faire</a>
-                    </li>
-                    <li>
-                        <a class="nav-link page-scroll" routerLink="/Testimonials"
-                            (click)="getActiveTab('testimonials')"
-                            [class.active]="activetab === 'testimonials'">Témoignages</a>
                     </li>
                     <li>
                         <a class="nav-link page-scroll" routerLink="/Client" (click)="getActiveTab('client')"
