@@ -8,11 +8,13 @@ import {
 import { Post } from './post'
 import { map } from "rxjs/operators";
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
   postsCollection: AngularFirestoreCollection<Post>
+  postDoc: AngularFirestoreDocument<Post>
 
   constructor(private afs: AngularFirestore) {
     this.postsCollection = this.afs.collection('posts', ref =>

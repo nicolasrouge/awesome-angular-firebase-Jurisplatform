@@ -23,6 +23,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button'; 
 
 
+
+import {MatStepperModule} from '@angular/material/stepper'; 
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -46,7 +48,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatSelectModule,
     MatSidenavModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatStepperModule
   ],
   exports: [
     CommonModule,
